@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">OnTime</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sunday">SUN</string>
+    <string name="monday">MON</string>
+    <string name="tuesday">TUE</string>
+    <string name="wednesday">WED</string>
+    <string name="thursday">THU</string>
+    <string name="friday">FRI</string>
+    <string name="saturday">SAT</string>
+    <string name="search_note">Search note</string>
+    <string name="time">Time</string>
+    <string name="place">Place</string>
+    <string name="note">Note</string>
+    <string name="title">Title</string>
+    <string name="date">Date</string>
+    <string name="start_from">Start from</string>
+    <string name="finish">Finish</string>
+    <string name="reminder">Reminder</string>
+    <string name="short_note">Short note</string>
+    <string name="your_text">Your text</string>
+    <string name="schedule">Schedule</string>
+    <string name="add_menu">Add Menu</string>
+    <string name="add_schedule">Add Schedule</string>
+    <string name="add_note">Add Note</string>
+
+
+</resources>

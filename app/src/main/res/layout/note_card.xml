@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="#7E64FF"
+    app:cardCornerRadius="10dp"
+    android:layout_marginBottom="10dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        >
+        <TextView
+            android:id="@+id/note_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            android:visibility="visible"
+            tools:text="test on creating this w"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:id="@+id/note_text"
+            android:ellipsize="end"
+
+            android:layout_marginBottom="8dp"
+            android:visibility="visible"
+            tools:text="sd"
+            />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          >
+          <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:textSize="12sp"
+              tools:text="15/08/2017"
+              android:textColor="@color/white"
+              app:layout_constraintLeft_toLeftOf="parent"
+              android:id="@+id/note_date"
+              app:layout_constraintBottom_toBottomOf="parent"
+              android:layout_weight="2.8"
+              />
+
+          <ImageView
+              app:layout_constraintRight_toRightOf="parent"
+              app:layout_constraintTop_toTopOf="@id/note_date"
+              app:layout_constraintBottom_toBottomOf="@id/note_date"
+              android:layout_width="18dp"
+              android:layout_height="18dp"
+              android:src="@drawable/ic_pin"
+              android:visibility="visible"
+              android:id="@+id/pin_note"
+              android:layout_gravity="end"
+              />
+      </LinearLayout>
+
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

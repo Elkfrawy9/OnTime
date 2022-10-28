@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="10dp"
+    app:cardBackgroundColor="@color/purple_900"
+    android:layout_marginBottom="12dp"
+    android:id="@+id/schedule_item_card"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_schedule_title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:text="Meeting with Anomali Team"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_margin="10dp"
+            app:layout_constraintRight_toLeftOf="@id/schedule_checked"
+            android:maxLines="1"
+            android:ellipsize="end"
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/schedule_checked"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1.5dp"
+            app:layout_constraintLeft_toLeftOf="@id/tv_schedule_title"
+            app:layout_constraintRight_toRightOf="@id/schedule_checked"
+            app:layout_constraintTop_toBottomOf="@id/tv_schedule_title"
+            android:background="@color/purple_250"
+            android:layout_marginTop="4dp"
+            android:id="@+id/div"
+            android:layout_marginEnd="12dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/div"
+            app:layout_constraintLeft_toLeftOf="@id/div"
+            android:layout_marginTop="6dp"
+            android:id="@+id/time"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="07:00 am - 10:00 am"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="@id/time"
+            app:layout_constraintLeft_toRightOf="@id/time"
+            app:layout_constraintBottom_toBottomOf="@id/time"
+            android:layout_marginStart="20dp"
+            android:id="@+id/schedule_time"
+            app:layout_constraintRight_toRightOf="@id/div"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/place"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/time"
+            app:layout_constraintLeft_toLeftOf="@id/time"
+            android:layout_marginTop="6dp"
+            android:id="@+id/ed_place"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Anna's house"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="@id/ed_place"
+            app:layout_constraintLeft_toLeftOf="@id/schedule_time"
+            android:id="@+id/schedule_place"
+            app:layout_constraintRight_toRightOf="@id/div"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintBottom_toBottomOf="@id/ed_place"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/note"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/ed_place"
+            app:layout_constraintLeft_toLeftOf="@id/time"
+            android:layout_marginTop="6dp"
+            android:id="@+id/note"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="don't forget to give her a bouquet of flowers"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="@id/note"
+            app:layout_constraintLeft_toLeftOf="@id/schedule_time"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:id="@+id/schedule_note"
+            app:layout_constraintRight_toRightOf="@id/div"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="12dp"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

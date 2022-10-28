@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.main.MainActivity"
+    android:background="@drawable/screen_background"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@android:color/transparent"
+        android:id="@+id/appBar"
+        >
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:menu="@menu/main_menu"
+            android:id="@+id/mainToolbar"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bu_schedule"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/schedule"
+        app:layout_constraintTop_toBottomOf="@id/appBar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="58dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:background="@drawable/button_selection"
+        android:textColor="@color/white"
+        app:layout_constraintRight_toLeftOf="@id/bu_note"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bu_note"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/note"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/appBar"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="58dp"
+        android:background="@drawable/button_selection"
+        app:layout_constraintLeft_toRightOf="@id/bu_schedule"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bu_schedule"
+        android:layout_marginTop="24dp"
+        android:id="@+id/fragmentContainer"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/dark_purple"
+            android:visibility="gone"
+            android:id="@+id/fabBackground"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/addMenu"
+            android:layout_margin="24dp"
+            android:contentDescription="@string/add_menu" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_schedule"
+            app:layout_constraintBottom_toTopOf="@id/addMenu"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/addSchedule"
+            android:layout_margin="24dp"
+            android:visibility="invisible"
+            android:contentDescription="@string/add_schedule" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_note"
+            app:layout_constraintBottom_toTopOf="@id/addSchedule"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/addNote"
+            android:layout_margin="24dp"
+            android:visibility="invisible"
+            android:contentDescription="@string/add_note" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>
